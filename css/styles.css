@@ -10993,7 +10993,7 @@ header.masthead {
   padding-bottom: 6rem;
   text-align: center;
   color: #fff;
-  background-image: url("../assets/img/torogoz_banner.png");
+  background-image: url("../assets/img/banner.png");
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
@@ -11001,7 +11001,7 @@ header.masthead {
 }
 @media (max-width: 1200px) {
   header.masthead {
-    background-image: url("../assets/img/mobile_banner.jpg");
+    background-image: url("../assets/img/mobile.png");
   }
 }
 header.masthead .masthead-subheading {
