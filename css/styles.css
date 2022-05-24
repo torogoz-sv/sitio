@@ -11121,7 +11121,7 @@ header.masthead .masthead-heading {
   opacity: 0.3;
 }
 
-#mentors .btn-social {
+#mentores .btn-social {
   height: 25px;
   width: 25px;
 }
@@ -11318,6 +11318,12 @@ header.masthead .masthead-heading {
 }
 
 #organizadores .team-member{
+  margin-bottom: 3rem;
+  text-align: center;
+  width: auto;
+}
+
+#mentores .team-member{
   margin-bottom: 3rem;
   text-align: center;
   width: auto;
