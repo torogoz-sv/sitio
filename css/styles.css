@@ -10940,7 +10940,7 @@ p {
 }
 
 #mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
-  color: #FF9900;
+  color: #FFFFFF; /*#FF9900*/
 }
 
 @media (min-width: 992px) {
