@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-<title>Asistencia</title>
+<title>Feedback</title>
 <meta name="format-detection" content="telephone=no">
 <meta name="msapplication-tap-highlight" content="no">
 <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">  <!-- Evita Bloqueo de HTTPS -->
@@ -23,60 +23,34 @@
 <script type="text/javascript">
     $(document).ready(function() {
 	
-		//Devuelve el footer de la pagina
-		var dataString = "w3=" + 1 + "&param=" + 600 + "&param1=" + "BTC";
-        $.ajax({
-		url: 'https://bitcoin.comercioazul.com/api/api.php',
-		data: dataString,
-		type: 'POST',
-		crossDomain: true,
-		cache: false,
-		dataType: 'json',
-			success:function(data){
-				if(!data.error) {
-					if(data.valor == "S")
-					{
-					    //alert (data.valor);
-						$('#show-asistencia').show();
+    // Registrar Feedback
+    $("#submit").click(function() {		
+		var email 	= $("#email").val();
+        var message 	= $("#message").val();
+		
+		var dataString = "w3=" + 1 + "&param=" + 603 + "&email=" + email +  "&param1=" + message + "&param2=" + "BTC";
+        if ($.trim(message).length > 0 ) {
+            $.ajax({
+		    url: 'https://bitcoin.comercioazul.com/api/api.php',
+			data: dataString,
+			type: 'POST',
+			crossDomain: true,
+			cache: false,
+				success:function(data){
+					if(!data.error) {
+					$('#result').html(data);
+					//temp = setTimeout(redireccion, 4000);
 					}
-					if(data.valor == "N")
-					{
-						$('#result').html("<font color='#FF3352'>Espere que sea habilitada</font>");
-					}
-					
 				}
-			}
-        });	
-		
-        // Registrar Asistencia
-        $("#submit").click(function() {		
-			var email 	= $("#email").val();
-            var secret 	= $("#secret").val();
-			var discord = $("#discord").val();
-			
-			var dataString = "w3=" + 1 + "&param=" + 601 + "&email=" + email +  "&param1=" + discord + "&param2=" + secret + "&param3=" + "BTC";
-            if ($.trim(secret).length > 0 ) {
-                $.ajax({
-			    url: 'https://bitcoin.comercioazul.com/api/api.php',
-				data: dataString,
-				type: 'POST',
-				crossDomain: true,
-				cache: false,
-					success:function(data){
-						if(!data.error) {
-						$('#result').html(data);
-						//temp = setTimeout(redireccion, 4000);
-						}
-					}
-                });	
-            }
-            return false;
-        });
-		
-		// funcion encargada de la redireccion
-		function redireccion() {
-			window.location = "index.html";
-		}	
+            });	
+        }
+        return false;
+    });
+	
+	// funcion encargada de la redireccion
+	function redireccion() {
+		window.location = "index.html";
+	}	
     });
 </script>
 
@@ -84,40 +58,34 @@
 <body>
 	<div class="container-contact100">
 		<div class="wrap-contact100">
-				<!--<a  href="index.html" style ="text-decoration:none"><img src="http://www.cultivandoelalma.com/API_Rest_OfertasSV/recursos/images/icons/home.jpg"> <span class="contact100-more-highlight"> Ir al Inicio </span> </a>
-				<br><br>-->
+
 					<form class="contact100-form validate-form">
 						<span class="contact100-form-title">
-							Asistencia - Torogoz Dev
+							Feedback - Torogoz Dev
 						</span>
 					<div class="contact100-more">
-						<span class="contact100-more-highlight">Importante:</span> complete la información requerida, asegúrese deingresar el email con el cual se registro en el programa.
+						<span class="contact100-more-highlight">Importante:</span> complete la información requerida, asegúrese de ingresar el <b>email</b> con el cual se registro en el programa.
 					</div>				
 					<br><br>
 					
 					<div class="contact100-form-title"><span id="result"></span></div>						
 
-                    <div id="show-asistencia" style="display: none;">
+                    <div id="show-feedback" style="display: inline;">
 					
 						<div class="wrap-input100 validate-input" data-validate = "Ingresar email valido: e@a.x" required>
 							<input class="input100" type="text" name="name" placeholder="Email" id="email">
 							<span class="focus-input100"></span>
 						</div>	
 
-						<div class="wrap-input100 validate-input" data-validate="Usuario de Discord">
-							<input class="input100" type="text" name="name" placeholder="Usuario de Discord"  maxlength="120" id="discord" required>
-							<span class="focus-input100"></span>
-						</div>
-											
 						
-						<div class="wrap-input100 validate-input" data-validate="Ingresar la palabra secreta">
-							<input class="input100" type="text" name="name" placeholder="Palabra Secreta" maxlength="90" id="secret" required>
+						<div class="wrap-input100 validate-input" data-validate = "Ingresar Feedback">
+							<textarea class="input100" name="message" placeholder="Ingresar Feedback" maxlength="1000" rows="5"  id="message"></textarea>
 							<span class="focus-input100"></span>
-						</div>	
+						</div>						
 
 						<div class="container-contact100-form-btn">
 							<button class="contact100-form-btn" id="submit" >
-									Registrar asistencia
+									Registrar Feedback
 							</button>
 						</div>
 						
