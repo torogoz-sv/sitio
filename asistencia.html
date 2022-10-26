@@ -87,19 +87,9 @@
 			
 				success:function(data){
 					if(!data.error) {
-					    //alert(data.suma);
-					
-						if(data.suma > 0)
-						{
-							$('#total').html(data.suma + "<font color='#FF3352'> estudiantes han marcado asistencia</font>");
+						  $('#total').html(data.suma + "<font size='4' color='#FF3352'> registros de asistencia</font>");
 						}
-						else
-						{
-							$('#total').html("<font color='#FF3352'>Sin registros de asistencia</font>");
-						}
-						
 					}
-				}
 			});
 		}		
 		
