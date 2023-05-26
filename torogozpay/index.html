@@ -1,0 +1,577 @@
+<!doctype html>
+<html lang="en">
+<head>
+		<!-- Required meta tags -->
+		<title>Torogoz Dev</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta name="format-detection" content="telephone=no">
+		<meta name="msapplication-tap-highlight" content="no">
+		<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> <!-- Evita Bloqueo de HTTPS -->
+		<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <!--<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">-->
+
+		<meta name="description" content="Torogoz Dev El Salvador">
+		<meta property="twitter:title" content="Torogoz Dev">
+		<meta property="og:url" content="https://torogoz.dev">
+		<meta property="og:image" content="https://bitcoin.comercioazul.com/images/torogoz_pay.png">
+		<meta property="twitter:description" content="Torogoz Dev El Salvador">
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="robots" content="index, follow">		
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500&display=swap">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+         <!--<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">-->
+		
+		<link rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+        <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+        <link rel="stylesheet" href="css/animate.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/media-queries.css">
+        <!-- Favicon and touch icons -->
+		<link rel="shortcut icon" href="ico/favicon.ico">
+		<script src="js/jquery-3.3.1.min.js"></script>
+
+				
+		
+	<script type="text/javascript">	
+	$(document).ready(function()
+	{
+          elegirIdioma('espanol');
+	});			 
+	</script>
+
+	<script type="text/javascript">	
+
+		document.write('<style type="text/css">div.cp_oculta{display: none;}</style>'); 
+		document.write('<style type="text/css">div.cp_buscar{display: none;}</style>'); 
+
+		function Mostrar(DivID) 
+		{
+				var aux = document.getElementById(DivID).style; 
+				aux.display = aux.display? "":"block"; 
+		} 
+		function Ocultar(DivID) 
+		{ 
+				var aux = document.getElementById(DivID).style; 
+				aux.display = aux.display? "":"none"; 
+		}		
+	</script>
+	
+  <script>
+    function elegirIdioma(idioma) {
+      if (idioma === 'ingles') {
+        // Acción a realizar cuando se selecciona inglés
+        //alert ("Seleccionaste el idioma inglés");
+		var dataString = "w3=" + 1 + "&param=" + 1 + "&pageid=" + 7 + "&pagegroupid=" + 1 + "&pagecategoryid=" + 1;
+      } else if (idioma === 'espanol') 
+	  {
+	    var dataString = "w3=" + 1 + "&param=" + 1 + "&pageid=" + 7 + "&pagegroupid=" + 1 + "&pagecategoryid=" + 1;
+      }
+    //alert (dataString);
+	$.ajax({
+	url: 'https://comercioazul.com/api/api.php',
+	data: dataString,
+	type: 'POST',
+		crossDomain: true,
+		cache: false,
+		dataType: 'json',
+			success:function(data){
+				if(!data.error) {
+				$('#head').html(data.head);
+				$('#body').html(data.body);
+				$('#foot').html(data.foot);
+				$('#copy').html(data.copy);
+				$('#sec1T').html(data.sec1T);
+				$('#sec1P').html(data.sec1P);
+				$('#sec1P2').html(data.sec1P2);
+				$('#sec1B').html(data.sec1B);
+				$('#sec1B2').html(data.sec1B2);
+				$('#sec2T').html(data.sec2T);
+				$('#sec2P').html(data.sec2P);
+				$('#sec2P2').html(data.sec2P2);
+				$('#sec2P3').html(data.sec2P3);  
+				$('#sec2P4').html(data.sec2P4); 
+				$('#sec3T').html(data.sec3T);
+				$('#sec3P').html(data.sec3P);
+				$('#sec3P2').html(data.sec3P2);
+				$('#sec3P3').html(data.sec3P3);  
+				$('#sec4T').html(data.sec4T);
+				$('#sec4P').html(data.sec4P);
+				$('#sec4P2').html(data.sec4P2);
+				$('#sec4P3').html(data.sec4P3);  
+				$('#sec4P4').html(data.sec4P4);  
+				$('#sec4P5').html(data.sec4P5);
+				$('#sec5T').html(data.sec5T);
+				$('#sec5P').html(data.sec5P);
+				$('#sec5P2').html(data.sec5P2);
+				$('#sec5P3').html(data.sec5P3); 
+				$('#sec5P4').html(data.sec5P4);
+				$('#sec6T').html(data.sec6T);
+				$('#sec6P').html(data.sec6P);
+				$('#sec6P2').html(data.sec6P2);
+				$('#sec6B').html(data.sec6B);
+				$('#sec7T').html(data.sec7T);
+				$('#sec7P').html(data.sec7P);
+				$('#sec7P2').html(data.sec7P2);
+				$('#sec7B').html(data.sec7B);
+				}
+			}
+        });	  
+	  
+    }
+  </script>	
+
+	  <style>
+		.estudiantes-table {
+		  width: 100%;
+		  border-collapse: collapse;
+		}
+
+		.estudiantes-table th {
+		  background-color: #f2f2f2;
+		  padding: 10px;
+		  text-align: left;
+		}
+
+		.estudiantes-table td {
+		  padding: 10px;
+		  border-bottom: 1px solid #ccc;
+		}
+
+		.estudiantes-table tr:last-child td {
+		  border-bottom: none;
+		}
+		
+		.dos-columnas-table {
+		  width: 100%;
+		  border-collapse: collapse;
+		}
+
+		.dos-columnas-table th {
+		  background-color: #f2f2f2;
+		  padding: 10px;
+		  text-align: left;
+		}
+
+		.dos-columnas-table td {
+		  padding: 10px;
+		  border-bottom: 1px solid #ccc;
+		}
+
+		.dos-columnas-table tr:last-child td {
+		  border-bottom: none;
+		}
+		
+		#language-selector {
+		  position: fixed;
+		  top: 10px;
+		  right: 10px;
+		}
+
+		#language-selector img {
+		  width: 30px;
+		  height: 20px;
+		  margin-left: 5px;
+		  cursor: pointer;
+		}
+
+		.flag-icon {
+		  width: 24px;
+		  height: 16px;
+		  margin-right: 5px;		
+		
+	  </style>	
+
+</head>
+<body>
+		<!-- Wrapper -->
+    	<div class="wrapper">
+	      <div id="language-selector">
+			<img src="img/backgrounds/ingles.png" id="english-flag" alt="English" onclick="elegirIdioma('ingles')">
+		  </div>		
+
+			<!-- Sidebar -->
+			<nav class="sidebar">
+				
+				<!-- close sidebar menu -->
+				<div class="dismiss">
+					<i class="fas fa-arrow-left"></i>
+				</div>
+				
+				<div class="logo">
+					<h3><a href="../index.html">Principal</a></h3>
+				</div>
+				
+				<ul class="list-unstyled menu-elements">
+					<li class="active">
+						<a class="scroll-link" href="#top-content"><i class="fas fa-house-user"></i> Home</a>
+					</li>
+					<li>
+						<a class="scroll-link" href="#section-1"><i class="fa-sharp fa-solid fa-bolt"></i> Torogoz Dev</a>
+					</li>
+					<li>
+						<a class="scroll-link" href="#section-2"><i class="fa-sharp fa-solid fa-bolt"></i> Fellowship</a>
+					</li>
+					<li>
+						<a class="scroll-link" href="#section-3"><i class="fa-sharp fa-solid fa-bolt"></i> Aprendizaje</a>
+					</li>
+					<li>
+						<a class="scroll-link" href="#section-4"><i class="fa-sharp fa-solid fa-bolt"></i> Orientación</a>
+					</li>
+					<li>
+					   <a class="scroll-link" href="#section-5"><i class="fa-brands fa-bitcoin"></i> Beneficios</a>
+					</li>					
+					<li>
+						<a class="scroll-link" href="#section-6"><i class="fa-sharp fa-solid fa-bolt"></i> Piloto</a>
+					</li>
+	
+			        <li>
+					<a class="scroll-link" href="#section-7"><i class="fa-sharp fa-solid fa-bolt"></i> Alcance</a>
+					</li>
+					<li>
+						<a class="scroll-link" href="#section-8"><i class="fa-sharp fa-solid fa-bolt"></i> Torogoz Pay </a>
+					</li>
+					<li>
+						<a class="scroll-link" href="#section-9"><i class="fa-solid fa-bitcoin-sign"></i> Donaciones </a>
+					</li>
+
+
+					
+					<!-- Este Submenu esta Excelente-->					
+					<li>
+						<a href="#otherSections" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" role="button" aria-controls="otherSections">
+							<i class="fas fa-sync"></i>Enlaces Directos
+						</a>
+						<ul class="collapse list-unstyled" id="otherSections">
+
+							<li>
+								<a href="https://www.facebook.com/torogozdev" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a>
+							</li>
+							<li>
+								<a href="https://twitter.com/torogozdev" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+							</li>
+							<li>
+								<a href="https://t.me/torogozdev" target="_blank"><i class="fab fa-telegram"></i> Telegram</a>
+							</li>
+							<li>
+								<a href="https://github.com/Torogozdev" target="_blank"><i class="fab fa-github"></i> Github</a>
+							</li>
+							<li>
+								<a href="http://www.torogoz.dev" target="_blank"><i class="fas fa-blog"></i> Web Site</a>
+							</li>	
+						</ul>
+					</li> 
+				</ul>
+				
+				<div class="to-top">
+					<a class="scroll-link" href="#top-content"><i class="fas fa-arrow-up"></i> Top</a>
+				</div>
+				
+				<div class="dark-light-buttons">
+					<a class="btn btn-primary btn-customized-4 btn-customized-dark" href="#" role="button">Dark</a>
+					<a class="btn btn-primary btn-customized-4 btn-customized-light" href="#" role="button">Light</a>
+				</div>
+			
+			</nav>
+			<!-- End sidebar -->
+			
+			<!-- Dark overlay -->
+    		<div class="overlay"></div>
+
+			<!-- Content -->
+			<div class="content">
+			
+	
+				<!-- open sidebar menu -->
+				<a class="btn btn-primary btn-customized open-menu" href="#" role="button">
+                    <i class="fas fa-align-left"></i> <span>Menú</span>
+                </a>
+				
+		        <!-- Section 0  -->
+		        <div class="top-content section-container" id="top-content">
+			        <div class="container">
+			            <div class="row"> 
+			                <div class="col col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+			                	<!--<h1 class="wow fadeIn" id="sec1T" ></h1>-->
+			                	
+
+			                </div>
+			            </div>		
+			        </div>
+		        </div>
+		
+		        <!-- Section 1 -->
+		        <div class="section-2-container section-container section-container" id="section-1">
+			        <div class="container">
+					
+			        	
+			            <div class="row">
+			                <div class="col section-3 section-description wow fadeIn">
+			                    <h2 id="sec1P"></h2>
+			                    <div class="divider-1 wow fadeInUp"><span></span></div>
+			                </div>
+			            </div>
+
+			            <div class="row">
+							
+			            	<div class="col section-3 section-description wow fadeIn">
+                            <p id="sec1P2"></p>
+							<p id="sec1B"></p>
+							<p id="sec1B2"></p>				
+												
+			                </div>
+			            </div>
+			        </div>
+		        </div>	
+				
+		        <!-- Section 2 -->
+		        <div class="section-2-container section-container section-container" id="section-2">
+			        <div class="container">
+					
+			        	
+			            <div class="row">
+			                <div class="col section-3 section-description wow fadeIn">
+			                    <h2 id="sec2T"></h2>
+			                    <div class="divider-1 wow fadeInUp"><span></span></div>
+			                </div>
+			            </div>
+
+			            <div class="row">
+							
+			            	<div class="col section-3 section-description wow fadeIn">
+                            <p id="sec2P"></p>					
+												
+			                </div>
+			            </div>
+			        </div>
+		        </div>						
+				
+
+		        <!-- Section 3 -->
+		        <div class="section-2-container section-container section-container" id="section-3">
+			        <div class="container">
+					
+			        	
+			            <div class="row">
+			                <div class="col section-3 section-description wow fadeIn">
+			                    <h2 id="sec2P2"></h2>
+			                    <div class="divider-1 wow fadeInUp"><span></span></div>
+			                </div>
+			            </div>
+
+			            <div class="row">
+							
+			            	<div class="col section-3 section-description wow fadeIn">
+                            <p id="sec2P3"></p>					
+												
+			                </div>
+			            </div>
+			        </div>
+		        </div>		
+				
+				
+		        <!-- Section 4 -->
+		        <div class="section-2-container section-container section-container" id="section-4">
+			        <div class="container">
+					
+			        	
+			            <div class="row">
+			                <div class="col section-3 section-description wow fadeIn">
+			                    <h2 id="sec2P4"></h2>
+			                    <div class="divider-1 wow fadeInUp"><span></span></div>
+			                </div>
+			            </div>
+
+			            <div class="row">
+							
+			            	<div class="col section-3 section-description wow fadeIn">
+                            <p id="sec3T"></p>					
+												
+			                </div>
+			            </div>
+			        </div>
+		        </div>	
+
+
+		        <!-- Section 5-->
+		        <div class="section-2-container section-container section-container" id="section-5">
+			        <div class="container">
+					
+			        	
+			            <div class="row">
+			                <div class="col section-3 section-description wow fadeIn">
+			                    <h2 id="sec3P"></h2>
+			                    <div class="divider-1 wow fadeInUp"><span></span></div>
+			                </div>
+			            </div>
+
+			            <div class="row">
+							
+			            	<div class="col section-3 section-description wow fadeIn">
+                            <p id="sec3P2"></p>		
+							<p id="sec3P3"></p>	
+				
+												
+			                </div>
+			            </div>
+			        </div>
+		        </div>			
+
+
+		        <!-- Section 6 -->
+		        <div class="section-2-container section-container section-container" id="section-6">
+			        <div class="container">
+					
+			        	
+			            <div class="row">
+			                <div class="col section-3 section-description wow fadeIn">
+			                    <h2 id="sec4T"></h2>
+			                    <div class="divider-1 wow fadeInUp"><span></span></div>
+			                </div>
+			            </div>
+
+			            <div class="row">
+							
+			            	<div class="col section-3 section-description wow fadeIn">
+                            <p id="sec4P"></p>		
+
+												
+			                </div>
+			            </div>
+			        </div>
+		        </div>						
+								
+
+		        <!-- Section 7-->
+		        <div class="section-2-container section-container section-container" id="section-7">
+			        <div class="container">
+					
+			        	
+			            <div class="row">
+			                <div class="col section-3 section-description wow fadeIn">
+			                    <h2 id="sec4P2"></h2>
+			                    <div class="divider-1 wow fadeInUp"><span></span></div>
+			                </div>
+			            </div>
+
+			            <div class="row">
+							
+			            	<div class="col section-3 section-description wow fadeIn">
+                            <p id="sec4P3"></p>		
+
+												
+			                </div>
+			            </div>
+			        </div>
+		        </div>		
+				
+				
+		        <!-- Section 8 -->
+		        <div class="section-2-container section-container section-container" id="section-8">
+			        <div class="container">
+					
+			        	
+			            <div class="row">
+			                <div class="col section-3 section-description wow fadeIn">
+			                    <h2 id="sec4P4"></h2>
+			                    <div class="divider-1 wow fadeInUp"><span></span></div>
+			                </div>
+			            </div>
+
+			            <div class="row">
+							
+			            	<div class="col section-3 section-description wow fadeIn">
+                            <p id="sec4P5"></p>		
+                            <p id="sec5T"></p>		
+                            <p id="sec5P"></p>
+                            <p id="sec5P2"></p>		
+                            <p id="sec5P3"></p>		
+                            <p id="sec5P4"></p>	
+                            <p id="sec6T"></p>	
+                            <p id="sec6P"></p>	
+                            <p id="sec6P2"></p>	
+                            <p id="sec6B"></p>
+			                </div>
+			            </div>
+			        </div>
+		        </div>		
+
+		        <!-- Section 9 -->
+		        <div class="section-2-container section-container section-container" id="section-9">
+			        <div class="container">
+					
+			        	
+			            <div class="row">
+			                <div class="col section-3 section-description wow fadeIn">
+			                    <h2 id="sec7T"></h2>
+			                    <div class="divider-1 wow fadeInUp"><span></span></div>
+			                </div>
+			            </div>
+
+			            <div class="row">
+							
+			            	<div class="col section-3 section-description wow fadeIn">
+                            <p id="sec7P"></p>		
+                            <p id="sec7P2"></p>		
+					
+			                </div>
+			            </div>
+			        </div>
+		        </div>										
+				
+
+		        <!-- Section 10 -->
+		        <div class="section-6-container section-container section-container-image-bg" id="section-10">
+			        <div class="container">
+					<div class="row">
+						<div class="col-md-5 offset-md-1 section-6-box wow fadeInDown">
+							<h3>¡Siguenos!</h3>
+							<div class="section-6-social">
+								<a href="https://www.facebook.com/torogozdev" target="_blank"><i class="fab fa-facebook-f"></i></a>
+								<a href="https://twitter.com/torogozdev" target="_blank"><i class="fab fa-twitter"></i></a>
+								<a href="https://t.me/torogozdev" target="_blank"><i class="fab fa-telegram"></i></a>
+								<a href="https://github.com/Torogozdev" target="_blank"><i class="fab fa-github"></i></a>
+							</div>
+						</div>	
+					</div>						
+			        </div>
+		        </div>
+						
+				<div style="text-align:right; padding-right: 20px;">
+				<br>
+					<a class="scroll-link" href="#top-content"><i class="fas fa-arrow-up"></i><b>&nbsp;Top</b></a>
+				</div>
+		        <!-- Footer -->
+		        <footer class="footer-container">
+		
+			        <div class="container">
+			        	<div class="row">
+		                    <div class="col" id="copy"> </div>
+		                </div>
+			        </div>
+		
+		        </footer>
+	        
+	        </div>
+	        <!-- End content -->
+        </div>
+        <!-- End wrapper -->
+
+        <!-- Javascript -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>		
+		<script src="js/jquery-3.3.1.min.js"></script>	
+		<script src="js/jquery-migrate-3.0.0.min.js"></script>
+        <script src="js/jquery.backstretch.min.js"></script>
+        <script src="js/wow.min.js"></script>
+        <script src="js/jquery.waypoints.min.js"></script>
+        <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script src="js/scripts.js"></script>
+
+
+</body>
+
+</html>
