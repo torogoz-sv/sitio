@@ -95,37 +95,4 @@ jQuery(document).ready(function() {
 	*/
 	new WOW().init();
 	
-	/*
-	    Contact form
-	*/
-       /* $("#submit").click(function() {
-			var name 	= $("#Name").val();
-			var country = $("#Country").val();			
-			var email 	= $("#Email").val();
-            var phone 	= $("#Phone").val();
-			var subject = $("#Subject").val();
-            var message = $("#Message").val();
-			var dataString = "w3=" + 1 + "&param=" + 5 + "&name=" + name + "&country=" + country + "&email=" + email +  "&phone=" + phone + "&subject=" + subject + "&message=" + message;
-            if ($.trim(name).length > 0 ) {
-                $.ajax({
-			    url: 'http://www.cultivandoelalma.com/API_Rest_EncuentroSV/index.php',
-				data: dataString,
-				type: 'POST',
-				crossDomain: true,
-				cache: false,
-					success:function(data){
-						if(!data.error) {
-						$('#result').html(data);
-						temp = setTimeout(redireccion, 9000);
-						}
-					}
-                });	
-            }
-            return false;
-        });
-		// funcion encargada de la redireccion
-		function redireccion() {
-			window.location = "index.html";
-		}*/
-	
 });

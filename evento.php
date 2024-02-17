@@ -93,7 +93,7 @@ function SendMessageEmail($nombre,$evento,$taller,$email,$Fecha,$Hora,$Direccion
 	    <b>Direccion:</b>$Direccion     <br><br> 
 		<b>Google Maps :</b>   $Mapa     <br><br> 
 		<b>Email:</b>  $email    <br><br>
-		<img src='https://www.bitcoin.comercioazul.com/images/evento-torogoz.png'><br><br> 
+		<img src='https://www.bitcoin.chiltota.xyz/images/evento-torogoz.png'><br><br> 
 		<hr>
 		"; 
 	$mensaje .= "				
@@ -176,21 +176,21 @@ function mailutf8($correo_destinatario,$asunto,$mensaje,$header)
 <meta name="msapplication-tap-highlight" content="no">
 <meta name="description" content="Atomic Swap en Bitcoin">
 <meta property="twitter:title" content="Bitcoin">
-<meta property="og:url" content="https://bitcoin.comercioazul.com">
-<meta property="og:image" content="https://www.bitcoin.comercioazul.com/images/evento-torogoz.png">
+<meta property="og:url" content="https://bitcoin.chiltota.xyz">
+<meta property="og:image" content="https://www.bitcoin.chiltota.xyz/images/evento-torogoz.png">
 <meta property="twitter:description" content="Atomic Swap en Bitcoin">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="robots" content="index, follow">
 
-<link rel="icon" type="image/png" href="https://www.comercioazul.com/favicon.ico"/>
+<link rel="icon" type="image/png" href="https://www.chiltota.xyz/favicon.ico"/>
 <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> <!-- Evita Bloqueo de HTTPS -->
 <meta http-equiv="Access-Control-Allow-Origin" content="*" /> <!-- Evita Bloqueo de HTTPS -->
 <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
-<link type="text/css" rel="stylesheet" href="https://www.comercioazul.com/pagadito/css/estilosresponsive.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="https://www.chiltota.xyz/pagadito/css/estilosresponsive.css" media="screen" />
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js'></script>
-<script type="text/javascript" src="https://www.comercioazul.com/api/recursos/jquery/jquery.js"></script> <!--Valida que no recargue la pagina-->
-<script type="text/javascript" src="https://www.comercioazul.com/api/recursos/jquery/jquery.form.js"></script><!--Valida que no recargue la pagina--> 
+<script type="text/javascript" src="https://www.chiltota.xyz/api/recursos/jquery/jquery.js"></script> <!--Valida que no recargue la pagina-->
+<script type="text/javascript" src="https://www.chiltota.xyz/api/recursos/jquery/jquery.form.js"></script><!--Valida que no recargue la pagina--> 
 
 <script type="text/javascript"><!--Inicia Valida que no recargue la pagina-->
 	 $('document').ready(function(){
@@ -252,7 +252,7 @@ function mailutf8($correo_destinatario,$asunto,$mensaje,$header)
 				<div align ="center">
 				<div class="row">
 					<div class="galeria">
-						<img src="https://www.bitcoin.comercioazul.com/images/evento-torogoz.png">
+						<img src="https://www.bitcoin.chiltota.xyz/images/evento-torogoz.png">
 					</div>
 					<div class="textoCompra">
 						<label id="principal"><?=$msgPrincipal?></label>
@@ -273,7 +273,7 @@ function mailutf8($correo_destinatario,$asunto,$mensaje,$header)
 				<div align ="center">	
                 <h3 style="font-size:23px; text-align: center; font-weight:bold;">Inscripción</h3>				
 				<p> <b>Para inscribirse digite su nombre y su correo el&eacute;ctronico</b>, luego darle enviar.</p>					
-							<div id="element2" align ="center" style="display: none; width: auto; height: auto; margin: 1%; padding: 2%;  background-image: url(https://www.comercioazul.com/recursos/informacion/imagesbase/left-big-back.png);">
+							<div id="element2" align ="center" style="display: none; width: auto; height: auto; margin: 1%; padding: 2%;  background-image: url(https://www.chiltota.xyz/recursos/informacion/imagesbase/left-big-back.png);">
 								<b>Registro exitoso, revise su correo en la bandeja de entrada o SPAM</b><br> 
 								<b>Te esperamos</b>
 								<br>
