@@ -15,10 +15,10 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="robots" content="index, follow">
 <!-- Favicon-->
-<link rel="icon" type="image/png" href="https://www.bitcoin.comercioazul.com/favicon.ico"/>
+<link rel="icon" type="image/png" href="https://www.bitcoin.chiltota.xyz/favicon.ico"/>
 <!--===============================================================================================-->
-<link rel="stylesheet" type="text/css" href="http://www.cultivandoelalma.com/API_Rest_Church/css/main.css">
-<script src="http://www.cultivandoelalma.com/API_Rest_Church/jquery/jquery-3.2.1.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://www.chiltota.xyz/api/recursos/css/main2.css">
+<script src="https://www.chiltota.xyz/api/recursos/jquery/jquery-3.2.1.min.js"></script>
 <!--===============================================================================================-->
 <script type="text/javascript">
     $(document).ready(function() {
@@ -26,7 +26,7 @@
 		//Devuelve el footer de la pagina
 		var dataString = "w3=" + 1 + "&param=" + 600 + "&param1=" + "BTC";
         $.ajax({
-		url: 'https://bitcoin.comercioazul.com/api/api.php',
+		url: 'https://bitcoin.chiltota.xyz/api/api.php',
 		data: dataString,
 		type: 'POST',
 		crossDomain: true,
@@ -58,7 +58,7 @@
 			var dataString = "w3=" + 1 + "&param=" + 601 + "&email=" + email +  "&param1=" + discord + "&param2=" + secret + "&param3=" + "BTC";
             if ($.trim(secret).length > 0 ) {
                 $.ajax({
-			    url: 'https://bitcoin.comercioazul.com/api/api.php',
+			    url: 'https://bitcoin.chiltota.xyz/api/api.php',
 				data: dataString,
 				type: 'POST',
 				crossDomain: true,
@@ -78,7 +78,7 @@
 		function totalAsistencia() {
 			var dataString = "w3=" + 1 + "&param=" + 604 + "&param1=" + "BTC";
 			$.ajax({
-			url: 'https://bitcoin.comercioazul.com/api/api.php',
+			url: 'https://bitcoin.chiltota.xyz/api/api.php',
 			data: dataString,
 			type: 'POST',
 			crossDomain: true,
@@ -104,8 +104,6 @@
 <body>
 	<div class="container-contact100">
 		<div class="wrap-contact100">
-				<!--<a  href="index.html" style ="text-decoration:none"><img src="http://www.cultivandoelalma.com/API_Rest_OfertasSV/recursos/images/icons/home.jpg"> <span class="contact100-more-highlight"> Ir al Inicio </span> </a>
-				<br><br>-->
 					<form class="contact100-form validate-form">
 						<span class="contact100-form-title">
 							Asistencia - Torogoz Dev
@@ -151,7 +149,7 @@
 	</div>
 
 <!--===============================================================================================-->
-	<script src="http://www.cultivandoelalma.com/API_Rest_Church/jquery/main.js"></script> <!--validaciones del formulario-->
+	<script src="https://www.chiltota.xyz/api/recursos/jquery/main.js"></script> <!--validaciones del formulario-->
 <!--===============================================================================================-->
 
 </body>
